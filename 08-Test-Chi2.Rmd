@@ -144,7 +144,7 @@ Pour répondre à la question, il nous faut une loi de distribution statistique 
 #abline(h = 0, col = "gray") # Baseline
 chart(data = tibble(Quantiles = .x, Prob = .d(.x)), Prob ~ Quantiles) +
   geom_hline(yintercept = 0, col = "gray") +
-  geom_ribbon(x = .x, ymin = 0, ymax = .d(.x), fill = "gray", alpha = 0.2) +
+  geom_ribbon(aes(x = .x, ymin = 0, ymax = .d(.x)), fill = "gray", alpha = 0.2) +
   geom_line() +
   xlab("Quantile") +
   ylab("Densité de probabilité")
@@ -179,8 +179,8 @@ q_ref <- qchisq(0.05, df = 1, lower.tail = FALSE)
 
 chart(data = tibble(Quantiles = .x, Prob = .d(.x)), Prob ~ Quantiles) +
   geom_hline(yintercept = 0, col = "gray") +
-  geom_ribbon(x = .x, ymin = 0, ymax = .d(.x), fill = "gray", alpha = 0.2) +
-  geom_ribbon(x = .x2, ymin = 0, ymax = .d(.x2), fill = "red", alpha = 0.2) +
+  geom_ribbon(aes(x = .x, ymin = 0, ymax = .d(.x)), fill = "gray", alpha = 0.2) +
+  geom_ribbon(aes(x = .x2, ymin = 0, ymax = .d(.x2)), fill = "red", alpha = 0.2) +
   geom_line() +
   xlab("Quantile") +
   ylab("Densité de probabilité") +

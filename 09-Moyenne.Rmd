@@ -196,8 +196,8 @@ Il s'agit du quantile 6,76. Le graphique correspondant est le suivant\ :
 chart(data = tibble(Quantiles = .x, Prob = .d(.x), Prob_N = .d2(.x)),
   Prob ~ Quantiles) +
   geom_hline(yintercept = 0, col = "gray") +
-  geom_ribbon(x = .x, ymin = 0, ymax = .d(.x), fill = "gray", alpha = 0.2) +
-  geom_ribbon(x = .x2, ymin = 0, ymax = .d(.x2), fill = "red", alpha = 0.2) +
+  geom_ribbon(aes(x = .x, ymin = 0, ymax = .d(.x)), fill = "gray", alpha = 0.2) +
+  geom_ribbon(aes(x = .x2, ymin = 0, ymax = .d(.x2)), fill = "red", alpha = 0.2) +
   geom_line() +
   # Normal distribution superposed in blue
   geom_line(aes(y = Prob_N), col = "lightblue3") +
@@ -258,9 +258,9 @@ On pourra aussi dire que la moyenne d'un échantillon de neuf observations issu 
 chart(data = tibble(Quantiles = .x, Prob = .d(.x), Prob_N = .d2(.x)),
   Prob ~ Quantiles) +
   geom_hline(yintercept = 0, col = "gray") +
-  geom_ribbon(x = .x, ymin = 0, ymax = .d(.x), fill = "gray", alpha = 0.2) +
-  geom_ribbon(x = .x1, ymin = 0, ymax = .d(.x1), fill = "red", alpha = 0.2) +
-  geom_ribbon(x = .x2, ymin = 0, ymax = .d(.x2), fill = "red", alpha = 0.2) +
+  geom_ribbon(aes(x = .x, ymin = 0, ymax = .d(.x)), fill = "gray", alpha = 0.2) +
+  geom_ribbon(aes(x = .x1, ymin = 0, ymax = .d(.x1)), fill = "red", alpha = 0.2) +
+  geom_ribbon(aes(x = .x2, ymin = 0, ymax = .d(.x2)), fill = "red", alpha = 0.2) +
   geom_line() +
   xlab("Quantile") +
   ylab("Densité de probabilité") +
@@ -330,11 +330,11 @@ Comme pour tout en statistique, nous devons accepter un certain risque de nous t
 chart(data = tibble(Quantiles = .x, Prob = .d(.x), Prob_N = .d2(.x)),
   Prob ~ Quantiles) +
   geom_hline(yintercept = 0, col = "gray") +
-  geom_ribbon(x = .x, ymin = 0, ymax = .d(.x), fill = "gray", alpha = 0.2) +
-  geom_ribbon(x = .x1, ymin = 0, ymax = .d(.x1), fill = "red", alpha = 0.2) +
-  geom_ribbon(x = .x2, ymin = 0, ymax = .d(.x2), fill = "red", alpha = 0.2) +
-  geom_ribbon(x = .x3, ymin = 0, ymax = .d(.x3), fill = "orange", alpha = 0.2) +
-  geom_ribbon(x = .x4, ymin = 0, ymax = .d(.x4), fill = "orange", alpha = 0.2) +
+  geom_ribbon(aes(x = .x, ymin = 0, ymax = .d(.x)), fill = "gray", alpha = 0.2) +
+  geom_ribbon(aes(x = .x1, ymin = 0, ymax = .d(.x1)), fill = "red", alpha = 0.2) +
+  geom_ribbon(aes(x = .x2, ymin = 0, ymax = .d(.x2)), fill = "red", alpha = 0.2) +
+  geom_ribbon(aes(x = .x3, ymin = 0, ymax = .d(.x3)), fill = "orange", alpha = 0.2) +
+  geom_ribbon(aes(x = .x4, ymin = 0, ymax = .d(.x4)), fill = "orange", alpha = 0.2) +
   geom_line() +
   xlab("Quantile") +
   ylab("Densité de probabilité") +
@@ -500,9 +500,9 @@ Le raisonnement est le suivant. Sous $H_0$, la distribution de $\Delta rear$ est
 chart(data = tibble(Quantiles = .x, Prob = .d(.x)),
   Prob ~ Quantiles) +
   geom_hline(yintercept = 0, col = "gray") +
-  geom_ribbon(x = .x, ymin = 0, ymax = .d(.x), fill = "gray", alpha = 0.2) +
-  geom_ribbon(x = .x1, ymin = 0, ymax = .d(.x1), fill = "red", alpha = 0.2) +
-  geom_ribbon(x = .x2, ymin = 0, ymax = .d(.x2), fill = "red", alpha = 0.2) +
+  geom_ribbon(aes(x = .x, ymin = 0, ymax = .d(.x)), fill = "gray", alpha = 0.2) +
+  geom_ribbon(aes(x = .x1, ymin = 0, ymax = .d(.x1)), fill = "red", alpha = 0.2) +
+  geom_ribbon(aes(x = .x2, ymin = 0, ymax = .d(.x2)), fill = "red", alpha = 0.2) +
   geom_line() +
   xlab("Quantile") +
   ylab("Densité de probabilité") +
@@ -633,8 +633,8 @@ Notez que la valeur *P* a été divisée par deux par rapport au test bilatéral
 chart(data = tibble(Quantiles = .x, Prob = .d(.x)),
   Prob ~ Quantiles) +
   geom_hline(yintercept = 0, col = "gray") +
-  geom_ribbon(x = .x, ymin = 0, ymax = .d(.x), fill = "gray", alpha = 0.2) +
-  geom_ribbon(x = .x1, ymin = 0, ymax = .d(.x1), fill = "red", alpha = 0.2) +
+  geom_ribbon(aes(x = .x, ymin = 0, ymax = .d(.x)), fill = "gray", alpha = 0.2) +
+  geom_ribbon(aes(x = .x1, ymin = 0, ymax = .d(.x1)), fill = "red", alpha = 0.2) +
   geom_line() +
   xlab("Quantile") +
   ylab("Densité de probabilité") +
