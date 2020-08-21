@@ -33,67 +33,218 @@ Le rapport sert à restituer de façon synthétique les résultats d'une étude 
 
 En général, les phrases sont simples, directes, courtes et précises (veuillez à utiliser le vocabulaire adéquat et précis). Les explications sont, autant que possible, linéaires. Evitez les renvois dans différentes autres parties du rapport, si ce n'est pour rappeler un élément évoqué plus haut, ou pour se référer à une figure ou une table. A ce sujet, les figures (dont les images, photos, schémas et graphiques) sont numérotées (Figure 1, Figure 2, ...) et accompagnées d'une légende en dessous d'elles. La figure et sa légende doivent être compréhensibles telles quelles. Dans le texte, vous pourrez alors vous référer à la figure, par exemple: "Tel phénomène est observable (voir Fig. 3)", ou "La Fig. 4 montre ...". idem pour les tableaux qui sont également numérotés (Tableau 1, Tableau 2, ...) et légendés, mais _au dessus_ du tableau. Les règles de lisibilité du tableau + légende et de renvoi vers les tableaux sont identiques que pour les figures. Les équations peuvent aussi être numérotées et des renvois de type (eq. 5) peuvent être alors utilisés. Enfin, toute affirmation doit être soit démontrée dans le rapport, soit complétée d'une citation vers un autre document scientifique qui la démontre. La partie bibliographie regroupe la liste de tous les documents qui sont ainsi cités à la fin du rapport.
 
-Veuillez à respecter les notations propres au système métrique international, les abbrévations usuelles dans la discipline, et le droit d'auteur et les licenses si vous voulez citer un passage ou reprendre une illustration provenant d'un autre auteur (sans omettre d'indiquer qui en est l'auteur). Enfin, en vue de rendre le document parfaitement reproductible, vous pouvez indiquer dans les annexes où trouver la source (le document `.Rmd`) et les données analysées. Vous pouvez également terminer avec un chunk qui renseigne de l'état du système R utilisé, y compris l'ensemble des packages employés. Ce chunk, présenté en annexe, contiendra l'instruction `utils::sessionInfo()`, ou mieux : `xfun::session_info()` (version courte) ou `devtools::session_info()` (version longue). Par exemple :
+Veuillez à respecter les notations propres au système métrique international, les abbrévations usuelles dans la discipline, et le droit d'auteur et les licenses si vous voulez citer un passage ou reprendre une illustration provenant d'un autre auteur (sans omettre d'indiquer qui en est l'auteur). Enfin, en vue de rendre le document parfaitement reproductible, vous pouvez indiquer dans les annexes où trouver la source (le document `.Rmd`) et les données analysées. Vous pouvez également terminer avec un chunk qui renseigne de l'état du système R utilisé, y compris l'ensemble des packages employés. Ce chunk, présenté en annexe, contiendra l'instruction `utils::sessionInfo()`, ou mieux : `sessioninfo::session_info()` (version courte) ou `devtools::session_info()` (version longue). Par exemple :
 
 
 ```r
-xfun::session_info()
+sessioninfo::session_info()
 ```
 
 ```
-R version 3.5.2 (2018-12-20)
-Platform: x86_64-apple-darwin15.6.0 (64-bit)
-Running under: macOS Mojave 10.14
+─ Session info ──────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 3.4.4 (2018-03-15)
+ os       Ubuntu 16.04.5 LTS          
+ system   x86_64, linux-gnu           
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ tz       Europe/Brussels             
+ date     2020-08-21                  
 
-Locale: fr_BE.UTF-8 / fr_BE.UTF-8 / fr_BE.UTF-8 / C / fr_BE.UTF-8 / fr_BE.UTF-8
-
-Package version:
-  acepack_1.4.1       anytime_0.3.3       askpass_1.1        
-  assertthat_0.2.1    backports_1.1.4     base64enc_0.1-3    
-  BH_1.69.0.1         bookdown_0.9        broom_0.5.2        
-  callr_3.2.0         cellranger_1.1.0    chart_1.2.0        
-  checkmate_1.9.1     cli_1.1.0           clipr_0.6.0        
-  cluster_2.0.8       codetools_0.2-16    colorspace_1.4-1   
-  compiler_3.5.2      cowplot_0.9.4       crayon_1.3.4       
-  curl_3.3            data.io_1.2.1       data.table_1.12.2  
-  datasets_3.5.2      DBI_1.0.0           dbplyr_1.4.0       
-  digest_0.6.19       dplyr_0.8.1         ellipse_0.4.1      
-  ellipsis_0.1.0      evaluate_0.13       fansi_0.4.0        
-  flow_1.1.0          forcats_0.4.0       foreign_0.8-71     
-  Formula_1.2-3       fs_1.3.1            generics_0.0.2     
-  ggplot2_3.2.0       ggplotify_0.0.3     ggpubr_0.2         
-  ggrepel_0.8.0       ggsci_2.9           ggsignif_0.5.0     
-  glue_1.3.1          graphics_3.5.2      grDevices_3.5.2    
-  grid_3.5.2          gridExtra_2.3       gridGraphics_0.3-0 
-  gtable_0.3.0        haven_2.1.0         highr_0.8          
-  Hmisc_4.2-0         hms_0.4.2           htmlTable_1.13.1   
-  htmltools_0.3.6     htmlwidgets_1.3     httr_1.4.0         
-  igraph_1.2.4.1      jsonlite_1.6        knitr_1.22         
-  labeling_0.3        lattice_0.20-38     latticeExtra_0.6-28
-  lazyeval_0.2.2      lubridate_1.7.4     magrittr_1.5       
-  markdown_0.9        MASS_7.3-51.4       Matrix_1.2-17      
-  methods_3.5.2       mgcv_1.8.28         mime_0.6           
-  modelr_0.1.4        munsell_0.5.0       nlme_3.1-139       
-  nnet_7.3-12         nycflights13_1.0.0  openssl_1.3        
-  pillar_1.4.1        pkgconfig_2.0.2     plogr_0.2.0        
-  plyr_1.8.4          polynom_1.4.0       prettyunits_1.0.2  
-  processx_3.3.0      progress_1.2.2      proto_1.0.0        
-  pryr_0.1.4          ps_1.3.0            purrr_0.3.2        
-  R6_2.4.0            RApiDatetime_0.0.4  RColorBrewer_1.1-2 
-  Rcpp_1.0.1          readr_1.3.1         readxl_1.3.1       
-  rematch_1.0.1       reprex_0.2.1        reshape2_1.4.3     
-  rlang_0.3.4         rmarkdown_1.12      rpart_4.1-15       
-  rstudioapi_0.10     rvcheck_0.1.3       rvest_0.3.3        
-  scales_1.0.0        SciViews_1.1.0      selectr_0.4.1      
-  splines_3.5.2       stats_3.5.2         stringi_1.4.3      
-  stringr_1.4.0       survival_2.44-1.1   svMisc_1.1.0       
-  sys_3.2             tibble_2.1.3        tidyr_0.8.3        
-  tidyselect_0.2.5    tidyverse_1.2.1     tinytex_0.12       
-  tools_3.5.2         tsibble_0.7.0       utf8_1.1.4         
-  utils_3.5.2         vctrs_0.1.0         viridis_0.5.1      
-  viridisLite_0.3.0   whisker_0.3.2       withr_2.1.2        
-  xfun_0.6            xml2_1.2.0          yaml_2.2.0         
-  zeallot_0.1.0      
+─ Packages ──────────────────────────────────────────────────────────────
+ package      * version  date      
+ acepack        1.4.1    2016-10-29
+ assertthat     0.2.0    2017-04-11
+ backports      1.1.2    2017-12-13
+ base64enc      0.1-3    2015-07-28
+ bindr          0.1.1    2018-03-13
+ bindrcpp       0.2.2    2018-03-29
+ bookdown       0.7      2018-02-18
+ broom          0.4.4    2018-03-29
+ cellranger     1.1.0    2016-07-27
+ chart        * 1.2.0    2018-09-16
+ checkmate      1.8.5    2017-10-24
+ cli            1.0.0    2017-11-05
+ clisymbols     1.2.0    2017-05-21
+ cluster        2.0.7-1  2018-04-09
+ codetools      0.2-15   2016-10-05
+ colorspace     1.3-2    2016-12-14
+ cowplot        0.9.2    2017-12-17
+ crayon         1.3.4    2017-09-16
+ data.io      * 1.2.1    2018-10-27
+ data.table     1.10.4-3 2017-10-27
+ digest         0.6.15   2018-01-28
+ dplyr        * 0.7.4    2017-09-28
+ ellipse        0.4.1    2018-01-05
+ evaluate       0.10.1   2017-06-24
+ flow         * 1.1.0    2018-08-29
+ forcats      * 0.3.0    2018-02-19
+ foreign        0.8-69   2017-06-21
+ Formula        1.2-2    2017-07-10
+ ggplot2      * 2.2.1    2016-12-30
+ ggplotify      0.0.3    2018-08-29
+ ggpubr         0.1.6    2017-11-14
+ glue           1.3.0    2018-08-29
+ gridExtra      2.3      2017-09-09
+ gridGraphics   0.3-0    2018-04-03
+ gtable         0.2.0    2016-02-26
+ haven          1.1.1    2018-01-18
+ Hmisc          4.1-1    2018-01-03
+ hms            0.4.2    2018-03-10
+ htmlTable      1.11.2   2018-01-20
+ htmltools      0.3.6    2017-04-28
+ htmlwidgets    1.2      2018-04-19
+ httr           1.3.1    2017-08-20
+ igraph         1.2.1    2018-03-10
+ inline         0.3.14   2015-04-13
+ jsonlite       1.5      2017-06-01
+ knitr          1.20     2018-02-20
+ lattice      * 0.20-35  2017-03-25
+ latticeExtra   0.6-28   2016-02-09
+ lazyeval       0.2.1    2017-10-29
+ lubridate      1.7.4    2018-04-11
+ magrittr       1.5      2014-11-22
+ MASS         * 7.3-49   2018-02-23
+ Matrix         1.2-14   2018-04-09
+ mnormt         1.5-5    2016-10-15
+ modelr         0.1.1    2017-07-24
+ munsell        0.4.3    2016-02-13
+ nlme           3.1-137  2018-04-07
+ nnet           7.3-12   2016-02-02
+ pillar         1.2.1    2018-02-27
+ pkgconfig      2.0.1    2017-03-21
+ plyr           1.8.4    2016-06-08
+ proto          1.0.0    2016-10-29
+ pryr           0.1.4    2018-02-18
+ psych          1.8.3.3  2018-03-30
+ purrr        * 0.2.4    2017-10-18
+ R6             2.2.2    2017-06-17
+ RColorBrewer   1.1-2    2014-12-07
+ Rcpp           0.12.16  2018-03-13
+ readr        * 1.1.1    2017-05-16
+ readxl         1.0.0    2017-04-18
+ reshape2       1.4.3    2017-12-11
+ rlang          0.2.0    2018-02-20
+ rmarkdown      1.10     2018-06-11
+ rpart          4.1-13   2018-02-23
+ rprojroot      1.3-2    2018-01-03
+ rstudioapi     0.7      2017-09-07
+ rvcheck        0.0.9    2017-07-10
+ rvest          0.3.2    2016-06-17
+ scales         0.5.0    2017-08-24
+ SciViews     * 1.1.0    2018-09-28
+ sessioninfo    1.0.0    2017-06-21
+ stringi        1.1.7    2018-03-12
+ stringr      * 1.3.0    2018-02-19
+ survival       2.42-3   2018-04-16
+ svMisc       * 1.1.0    2018-08-29
+ tibble       * 1.4.2    2018-01-22
+ tidyr        * 0.8.0    2018-01-29
+ tidyverse    * 1.2.1    2017-11-14
+ tsibble        0.1.5    2018-04-01
+ viridis        0.5.1    2018-03-29
+ viridisLite    0.3.0    2018-02-01
+ withr          2.1.2    2018-03-15
+ xfun           0.1      2018-01-22
+ xml2           1.2.0    2018-01-24
+ yaml           2.1.18   2018-03-08
+ source                                  
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ Github (SciViews/chart@26696d4)         
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ Github (SciViews/data.io@b9a69c1)       
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ Github (SciViews/flow@8fb8690)          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ Github (GuangchuangYu/ggplotify@a6fd39a)
+ CRAN (R 3.4.4)                          
+ Github (tidyverse/glue@4e74901)         
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ Github (SciViews/SciViews@8808306)      
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ Github (SciViews/svMisc@c61c525)        
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
+ CRAN (R 3.4.4)                          
 ```
 
 

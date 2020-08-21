@@ -1,5 +1,5 @@
 --- 
-title: "Science des données biologiques, UMONS"
+title: "Science des données biologiques"
 author: "Philippe Grosjean & Guyliann Engels"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -29,12 +29,12 @@ knitr::write_bib(c(.packages(), 'bookdown', 'knitr', 'rmarkdown'), 'packages.bib
 
 Cet ouvrage a été écrit pour le cours de science des données I : inférence et visualisation de l'année académique 2018-2019. Afin de trouver la dernière version disponible de cet ouvrage suivez le lien suivant :
 
-- <http://biodatascience-course.sciviews.org/sdd-umons/> 
+- <https://wp.sciviews.org/sdd-umons> 
 
 ```
 
 
-Cet ouvrage couvrira, à terme, la matière des cinq cours de science des données enseignés aux biologistes de la Faculté des Sciences de l'Université de Mons (Belgique). La matière sera complétée progressivement à partir du premier cours prévu pour l'année académique 2018-2019.
+Cet ouvrage interactif est le premier volume d'une série de trois ouvrages traitant de la science des données biologiques. La matière sera complétée progressivement à partir du premier cours prévu pour l'année académique 2018-2019, et deux autres tomes viendront la compléter en 2019-2020 (partie 2) et 2020-2021 (partie 3)..
 
 Cet ouvrage est conçu pour être utilisé de manière interactive en ligne. En effet, nous prévoyons d'y adjoindre des capsules (unités d'enseignement ciblant un et un seul concept) sous forme de vidéos, des démonstrations interactives, et des exercices sous forme de questionnaires interactifs également. **Ces différents éléments ne sont, bien évidemment, utilisables qu'en ligne.**
 

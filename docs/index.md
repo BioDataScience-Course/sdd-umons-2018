@@ -1,7 +1,7 @@
 --- 
-title: "Science des données biologiques, UMONS"
+title: "Science des données biologiques"
 author: "Philippe Grosjean & Guyliann Engels"
-date: "2019-07-03"
+date: "2020-08-21"
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
@@ -22,14 +22,14 @@ cover-image: "images/front-cover.png"
 
 
 <div class="info">
-<p>Cet ouvrage a été écrit pour le cours de science des données I : inférence et visualisation de l’année académique 2018-2019. Afin de trouver la dernière version disponible de cet ouvrage suivez le lien suivant :</p>
+<p>Cet ouvrage a été écrit pour le cours de science des données I : inférence et visualisation de l'année académique 2018-2019. Afin de trouver la dernière version disponible de cet ouvrage suivez le lien suivant :</p>
 <ul>
-<li><a href="http://biodatascience-course.sciviews.org/sdd-umons/" class="uri">http://biodatascience-course.sciviews.org/sdd-umons/</a></li>
+<li><a href="https://wp.sciviews.org/sdd-umons" class="uri">https://wp.sciviews.org/sdd-umons</a></li>
 </ul>
 </div>
 
 
-Cet ouvrage couvrira, à terme, la matière des cinq cours de science des données enseignés aux biologistes de la Faculté des Sciences de l'Université de Mons (Belgique). La matière sera complétée progressivement à partir du premier cours prévu pour l'année académique 2018-2019.
+Cet ouvrage interactif est le premier volume d'une série de trois ouvrages traitant de la science des données biologiques. La matière sera complétée progressivement à partir du premier cours prévu pour l'année académique 2018-2019, et deux autres tomes viendront la compléter en 2019-2020 (partie 2) et 2020-2021 (partie 3)..
 
 Cet ouvrage est conçu pour être utilisé de manière interactive en ligne. En effet, nous prévoyons d'y adjoindre des capsules (unités d'enseignement ciblant un et un seul concept) sous forme de vidéos, des démonstrations interactives, et des exercices sous forme de questionnaires interactifs également. **Ces différents éléments ne sont, bien évidemment, utilisables qu'en ligne.**
 
@@ -41,8 +41,8 @@ Le premier cours intitulé **Science des données I: visualisation et inférence
 
 Cette matière est divisée en 12 modules de sessions de 6h chacune en présentiel. **Une première séance de 2h précèdera ces 12 modules afin d'installer les logiciels (SciViews Box, R, RStudio, Github Desktop), et de se familiariser avec eux.**
 
-<!--html_preserve--><div id="htmlwidget-8f7dfff0cce98710a0da" style="width:600px;height:600px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8f7dfff0cce98710a0da">{"x":{"diagram":"\ndigraph general_flow {\n  graph [rankdir = \"TB\", overlap = true, compount = true, fontsize = 10]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fillcolor = LightSteelBlue,\n        fixedsize = true,\n        width = 2]\n  \"1 Introduction\"; \"12 Design/critique\"\n  \n  subgraph cluster_0 {\n    style = filled;\n    color = lightgrey;\n    node [style = filled, color = red];\n    \"2 Visualisation I\"->\"3 Visualisation II\"\n    \"2 Visualisation I\"->\"4 Visualisation III\"\n    label = \"Visualisation & description des données\";\n    color = lightgray\n  }\n  \n  subgraph cluster_1 {\n    style = filled;\n    color = lightgrey;\n    node [style = filled, color = blue];\n    \"5 Quantitatif\"->\"6 Qualitatif\"\n    label = \"Importation & transformation des données\";\n    color = lightgray\n  }\n  \n  subgraph cluster_2 {\n    style = filled;\n    color = lightgrey;\n    node [style = filled, color = green];\n    \"7 Probabilités\"->\"8 Test Chi2\"\n    \"7 Probabilités\"->\"9 IC/t-test\"\n    \"8 Test Chi2\"->\"9 IC/t-test\"\n    \"9 IC/t-test\"->\"10 ANOVA\"\n    \"10 ANOVA\"->\"11 Correlation\"\n    label = \"Inférence & hypothèses\";\n    color = lightgray\n  }\n\n  \"1 Introduction\"->\"2 Visualisation I\" [lhead = cluster_0]\n  \"2 Visualisation I\"->\"5 Quantitatif\" [lhead = cluster_1]\n  \"3 Visualisation II\"->\"7 Probabilités\" [lhead = cluster_2]\n  \"4 Visualisation III\"->\"7 Probabilités\" [lhead = cluster_2]\n  \"6 Qualitatif\"->\"7 Probabilités\" [lhead = cluster_2]\n  \"11 Correlation\"->\"12 Design/critique\"\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-fc39f5d43b951747fc7d" style="width:600px;height:600px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fc39f5d43b951747fc7d">{"x":{"diagram":"\ndigraph general_flow {\n  graph [rankdir = \"TB\", overlap = true, compount = true, fontsize = 10]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fillcolor = LightSteelBlue,\n        fixedsize = true,\n        width = 2]\n  \"1 Introduction\"; \"12 Design/critique\"\n  \n  subgraph cluster_0 {\n    style = filled;\n    color = lightgrey;\n    node [style = filled, color = red];\n    \"2 Visualisation I\"->\"3 Visualisation II\"\n    \"2 Visualisation I\"->\"4 Visualisation III\"\n    label = \"Visualisation & description des données\";\n    color = lightgray\n  }\n  \n  subgraph cluster_1 {\n    style = filled;\n    color = lightgrey;\n    node [style = filled, color = blue];\n    \"5 Quantitatif\"->\"6 Qualitatif\"\n    label = \"Importation & transformation des données\";\n    color = lightgray\n  }\n  \n  subgraph cluster_2 {\n    style = filled;\n    color = lightgrey;\n    node [style = filled, color = green];\n    \"7 Probabilités\"->\"8 Test Chi2\"\n    \"7 Probabilités\"->\"9 IC/t-test\"\n    \"8 Test Chi2\"->\"9 IC/t-test\"\n    \"9 IC/t-test\"->\"10 ANOVA\"\n    \"10 ANOVA\"->\"11 Correlation\"\n    label = \"Inférence & hypothèses\";\n    color = lightgray\n  }\n\n  \"1 Introduction\"->\"2 Visualisation I\" [lhead = cluster_0]\n  \"2 Visualisation I\"->\"5 Quantitatif\" [lhead = cluster_1]\n  \"3 Visualisation II\"->\"7 Probabilités\" [lhead = cluster_2]\n  \"4 Visualisation III\"->\"7 Probabilités\" [lhead = cluster_2]\n  \"6 Qualitatif\"->\"7 Probabilités\" [lhead = cluster_2]\n  \"11 Correlation\"->\"12 Design/critique\"\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 
 ## Matériel pédagogique {-}
@@ -62,11 +62,11 @@ Le matériel pédagogique, rassemblé dans ce syllabus interactif est aussi vari
 - des renvois vers des documents externes en ligne, types vidéos youtube ou vimeo, des ouvrages en ligne en anglais ou en français, des blogs, des tutoriaux, des parties gratuites de cours Datacamp ou équivalents, des questions sur des sites comme "Stackoverflow" ou issues des "mailing lists" R, ...
 
 <div class="info">
-<p>Tout ce matériel est accessible à partir du <a href="http://biodatascience-course.sciviews.org">site Web du cours</a>, du présent syllabus interactif (et de Moodle pour les étudiants de l’UMONS). Ces derniers ont aussi accès au dossier <code>SDD</code> sur <code>StudentTemp</code> en Intranet à l’UMONS. Les aspects pratiques seront à réaliser en utilisant la <strong>‘SciViews Box’</strong>, une machine virtuelle préconfigurée que nous installerons ensemble lors du premier cours<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Il vous faudra donc avoir accès à un ordinateur (sous Windows, MacOS, ou Linux peu importe, suffisamment puissant et connecté à Internet ou à l’Intranet UMONS). Enfin, vous pourrez poser vos questions par mail à l’adresse <code>sdd@sciviews.org</code>.</p>
+<p>Tout ce matériel est accessible à partir du <a href="http://biodatascience-course.sciviews.org">site Web du cours</a>, du présent syllabus interactif (et de Moodle pour les étudiants de l'UMONS). Ces derniers ont aussi accès au dossier <code>SDD</code> sur <code>StudentTemp</code> en Intranet à l'UMONS. Les aspects pratiques seront à réaliser en utilisant la <strong>'SciViews Box'</strong>, une machine virtuelle préconfigurée que nous installerons ensemble lors du premier cours<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Il vous faudra donc avoir accès à un ordinateur (sous Windows, MacOS, ou Linux peu importe, suffisamment puissant et connecté à Internet ou à l'Intranet UMONS). Enfin, vous pourrez poser vos questions par mail à l'adresse <code>sdd@sciviews.org</code>.</p>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Il est donc très important que vous soyez présent à ce cours, et vous pouvez venir aussi si vous le souhaitez avec votre propre ordinateur portable.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>Il est donc très important que vous soyez présent à ce cours, et vous pouvez venir aussi si vous le souhaitez avec votre propre ordinateur portable.<a href="#fnref1">↩</a></p></li>
 </ol>
 </div>
 </div>
@@ -131,36 +131,34 @@ sessioninfo::session_info()
 ```
 # ─ Session info ──────────────────────────────────────────────────────────
 #  setting  value                       
-#  version  R version 3.5.2 (2018-12-20)
-#  os       macOS Mojave 10.14          
-#  system   x86_64, darwin15.6.0        
+#  version  R version 3.4.4 (2018-03-15)
+#  os       Ubuntu 16.04.5 LTS          
+#  system   x86_64, linux-gnu           
 #  ui       X11                         
 #  language (EN)                        
-#  collate  fr_BE.UTF-8                 
-#  ctype    fr_BE.UTF-8                 
+#  collate  en_US.UTF-8                 
 #  tz       Europe/Brussels             
-#  date     2019-07-03                  
+#  date     2020-08-21                  
 # 
 # ─ Packages ──────────────────────────────────────────────────────────────
-#  package     * version date       lib source        
-#  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.2)
-#  bookdown      0.9     2018-12-21 [1] CRAN (R 3.5.0)
-#  cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.2)
-#  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)
-#  digest        0.6.19  2019-05-20 [1] CRAN (R 3.5.2)
-#  evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)
-#  fortunes      1.5-4   2016-12-29 [1] CRAN (R 3.5.0)
-#  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)
-#  knitr         1.22    2019-03-08 [1] CRAN (R 3.5.2)
-#  magrittr      1.5     2014-11-22 [1] CRAN (R 3.5.0)
-#  Rcpp          1.0.1   2019-03-17 [1] CRAN (R 3.5.2)
-#  rmarkdown     1.12    2019-03-14 [1] CRAN (R 3.5.2)
-#  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)
-#  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.2)
-#  stringr       1.4.0   2019-02-10 [1] CRAN (R 3.5.2)
-#  withr         2.1.2   2018-03-15 [1] CRAN (R 3.5.0)
-#  xfun          0.6     2019-04-02 [1] CRAN (R 3.5.2)
-#  yaml          2.2.0   2018-07-25 [1] CRAN (R 3.5.0)
-# 
-# [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library
+#  package     * version date       source        
+#  backports     1.1.2   2017-12-13 CRAN (R 3.4.4)
+#  bookdown      0.7     2018-02-18 CRAN (R 3.4.4)
+#  clisymbols    1.2.0   2017-05-21 CRAN (R 3.4.4)
+#  digest        0.6.15  2018-01-28 CRAN (R 3.4.4)
+#  evaluate      0.10.1  2017-06-24 CRAN (R 3.4.4)
+#  fortunes      1.5-4   2016-12-29 CRAN (R 3.4.4)
+#  htmltools     0.3.6   2017-04-28 CRAN (R 3.4.4)
+#  inline        0.3.14  2015-04-13 CRAN (R 3.4.4)
+#  knitr         1.20    2018-02-20 CRAN (R 3.4.4)
+#  magrittr      1.5     2014-11-22 CRAN (R 3.4.4)
+#  Rcpp          0.12.16 2018-03-13 CRAN (R 3.4.4)
+#  rmarkdown     1.10    2018-06-11 CRAN (R 3.4.4)
+#  rprojroot     1.3-2   2018-01-03 CRAN (R 3.4.4)
+#  sessioninfo   1.0.0   2017-06-21 CRAN (R 3.4.4)
+#  stringi       1.1.7   2018-03-12 CRAN (R 3.4.4)
+#  stringr       1.3.0   2018-02-19 CRAN (R 3.4.4)
+#  withr         2.1.2   2018-03-15 CRAN (R 3.4.4)
+#  xfun          0.1     2018-01-22 CRAN (R 3.4.4)
+#  yaml          2.1.18  2018-03-08 CRAN (R 3.4.4)
 ```
