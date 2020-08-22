@@ -14,7 +14,7 @@ bookdown::gitbook:
         <li><a href="https://github.com/BioDataScience-Course">Site Github du cours</a></li>
         <br/>
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Publié avec bookdown</a></li>
-    edit: https://github.com/BioDataScience-Course/sdd-umons/edit/master/%s
+    edit: https://github.com/BioDataScience-Course/sdd-umons-2018/edit/master/%s
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
